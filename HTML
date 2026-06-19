@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="theme-color" content="#0a0a0f">
+<title>O Segredo da Floresta</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="gameContainer">
+
+  <!-- ===== MENU PRINCIPAL ===== -->
+  <div id="menuScreen">
+    <div id="menuBg"></div>
+    <div id="menuContent">
+      <h1 id="gameTitle">
+        <span class="titleLine1">O SEGREDO</span>
+        <span class="titleLine2">DA FLORESTA</span>
+      </h1>
+      <div id="menuHood"></div>
+      <button id="playBtn" class="menuBtn">▶ JOGAR</button>
+      <button id="howToBtn" class="menuBtn">? COMO JOGAR</button>
+      <p id="menuFooter">Use ← → para mover · Z para pular · X para atirar fogo</p>
+    </div>
+  </div>
+
+  <!-- ===== TELA "COMO JOGAR" ===== -->
+  <div id="howToScreen" class="hidden">
+    <div id="howToContent">
+      <h2>COMO JOGAR</h2>
+      <div class="howToRow"><span class="key">◄ ►</span><span>Mover Chapeuzinho</span></div>
+      <div class="howToRow"><span class="key">Z</span><span>Pular</span></div>
+      <div class="howToRow"><span class="key">X</span><span>Atirar bola de fogo</span></div>
+      <p class="howToText">Atravesse a floresta, derrote as criaturas e descubra quem é o monstro misterioso que te persegue!</p>
+      <button id="backBtn" class="menuBtn">VOLTAR</button>
+    </div>
+  </div>
+
+  <!-- ===== HUD SUPERIOR ===== -->
+  <div id="title" class="hidden">★ O SEGREDO DA FLORESTA ★</div>
+
+  <!-- ===== CANVAS DO JOGO ===== -->
+  <canvas id="c" width="240" height="135" class="hidden"></canvas>
+
+  <div id="ui" class="hidden">
+    <span id="hp">♥♥♥</span>
+    <span id="stage">FLORESTA</span>
+    <span id="sc">PTS: 0</span>
+  </div>
+
+  <div id="msg"></div>
+
+  <!-- ===== CONTROLES MOBILE ===== -->
+  <div id="mobileControls" class="hidden">
+    <div id="dpad">
+      <button id="btnLeft" class="ctrlBtn" aria-label="Mover esquerda">◄</button>
+      <button id="btnRight" class="ctrlBtn" aria-label="Mover direita">►</button>
+    </div>
+    <div id="actionPad">
+      <button id="btnJump" class="ctrlBtn ctrlAction" aria-label="Pular">▲</button>
+      <button id="btnFire" class="ctrlBtn ctrlAction ctrlFire" aria-label="Atirar fogo">🔥</button>
+    </div>
+  </div>
+
+  <div id="controlsHint" class="hidden"><span>← → MOVER &nbsp; Z PULAR &nbsp; X FOGO</span></div>
+
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
